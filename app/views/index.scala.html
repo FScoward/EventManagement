@@ -1,7 +1,42 @@
 @(message: String)
 
-@main("Welcome to Play") {
+@angular_main("Welcome to Play") {
 
-    @play20.welcome(message)
+ イベント名: <input type="text" ng-model="eventName">
+ <dl class="dl-horizontal">
+ 	<dt>イベント名</dt>
+ 	<dd>{{eventName}}</dd>
+ </dl>
+ 
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">イベント名</h3>
+  </div>
+  <div class="panel-body">
+  {{eventName}}
+  </div>
+</div>
+
+<form role="form">
+	<div class="form-group">
+		<label for="eventName">Event Name</lable>
+		<input type="text" class="form-control" id="eventName" placeholder="eventName">
+	</div>
+	<div class="form-group">
+		<label for="eventDate">Event Date</label>
+		<input type="date" class="form-control" id="eventDate" placeholder="eventDate">
+	</div>
+	<div class="form-group">
+		<label for="performer">Performer</label>
+		<input type="text" class="form-control" id="performer" placeholder="performer">
+	</div>
+	<div class="form-group">
+		<label for="location">Location</label>
+		<input type="text" class="form-control" id="location" placeholder="location">
+	</div>
+	<button type="submit" class="btn btn-default">Submit</button>
+</form>
+ 
+	
 
 }
